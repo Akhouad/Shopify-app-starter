@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    hello from hbs
-    {{ data }}
+    <form action="/mailchimp/create" method="post">
+        <input type="text" name="apikey">
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>

@@ -3,6 +3,15 @@ const express = require('express');
 const app = express();
 const path = require('path')
 var cors = require('cors');
+var bodyParser = require('body-parser')
+
+var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+
+const DB = process.env.DB
+mongoose.connect('mongodb://localhost:27017/'+DB, {useNewUrlParser: true });
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 app.use(cors({
   origin: '*',
@@ -18,7 +27,9 @@ app.get('/', (req, res) => {
 });
 
 const shopifyRoutes = require('./routes/shopify')
+const mailchimpRoutes = require('./routes/mailchimp')
 app.use('/shopify', shopifyRoutes)
+app.use('/mailchimp', mailchimpRoutes)
 
 
 app.listen(3000, () => {
