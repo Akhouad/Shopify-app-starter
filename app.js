@@ -27,9 +27,7 @@ app.get('/', (req, res) => {
 });
 
 const shopifyRoutes = require('./routes/shopify')
-const mailchimpRoutes = require('./routes/mailchimp')
 app.use('/shopify', shopifyRoutes)
-app.use('/mailchimp', mailchimpRoutes)
 
 
 app.listen(3000, () => {
