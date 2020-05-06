@@ -1,20 +1,37 @@
 {
-  "name": "Shopify-app-starter",
+  "name": "mailSync",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cookie": "^0.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "hbs": "^4.1.1",
+    "nonce": "^1.0.4",
+    "nodemon": "^2.0.3",
+    "mongoose": "^5.9.10",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "shopify-api-node": "^3.3.1"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=development nodemon ./app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Akhouad/Shopify-app-starter.git"
+    "url": "git+https://github.com/Akhouad/mailsync.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Akhouad/Shopify-app-starter/issues"
+    "url": "https://github.com/Akhouad/mailsync/issues"
   },
-  "homepage": "https://github.com/Akhouad/Shopify-app-starter#readme"
+  "homepage": "https://github.com/Akhouad/mailsync#readme"
 }
